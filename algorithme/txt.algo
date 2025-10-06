@@ -1,0 +1,28 @@
+// The length of the sentence (the number of characters).
+   sentence : string
+   i, length, words, vowels : integer
+
+Begin
+   Read sentence   
+   length ← 0
+   words ← 1
+   vowels ← 0
+//    The number of vowels in the sentence.
+
+   For each character c in sentence do
+       length ← length + 1
+
+       If c = ' ' then
+            words ← words + 1
+     
+       EndIf
+
+       If c in ['a','e','i','o','u','A','E','I','O','U'] then
+            vowels ← vowels + 1
+       EndIf
+   EndFor
+
+   Write "Length of the sentence = ", length
+   Write "Number of words = ", words
+   Write "Number of vowels = ", vowels
+End
